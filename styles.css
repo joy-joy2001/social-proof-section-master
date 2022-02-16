@@ -1,8 +1,101 @@
+/* ---------------   GLOBAL VARIABLES   --------------- */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+:root {
+    --dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-greyish-magenta: hsl(303, 10%, 53%);
+    --light-greyish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    margin: 5rem 10rem;;
+}
+
+
+/* ---------------   UPPER CONTAINER STYLING: HERO + RATINGS   --------------- */
+.upper-container {
+    display: flex;
+    border: 1px solid red;
+}
+
+/* This gives each article element with a direct parent of .upper-container a flex: 1
+    flex: 1 -->  {flex-grow: 1, flex-shrink: 1, flex-basis: 0} since flex-basis: 0, then each element will
+    grow at the same rate (of 1 indicated by flex-grow) and size... flex-shrink doesn't really have an effect*/
+.upper-container > article {
+    flex: 1;
+}
+
+    /* ---------------   HERO CONTAINER   --------------- */
+.hero-container {
+    border: 1px solid black; 
+}
+
+.hero-container h1 {
+    color: var(--dark-magenta);
+    font-size: 3rem;
+    font-weight: 700;
+    font-weight: bold;
+    margin: 0;
+    line-height: 3rem;
+}
+
+.hero-container p {
+    color: var(--dark-greyish-magenta);
+    font-size: .9rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+    /* ---------------   RATINGS CONTAINER   --------------- */
+.rating-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 3rem;
+    color: var(--dark-magenta);
+    font-size: .8rem;
+    font-weight: 700;
+    border-radius: 12px;
+    background-color: var(--light-greyish-magenta);
+}
+
+.rating-by-reportguru {
+    align-self: center;
+}
+
+.rating-by-besttech {
+    align-self: flex-end;
+}
+
+/* ---------------   FOOTER   --------------- */
 .attribution {
     font-size: 11px;
     text-align: center;
   }
-  
+
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
