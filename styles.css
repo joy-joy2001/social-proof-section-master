@@ -73,13 +73,21 @@ main {
 .rating {
     display: flex;
     align-items: center;
+    gap: 1rem;
     width: 80%;
     height: 3rem;
+    padding-left: 1.5rem;
     color: var(--dark-magenta);
     font-size: .8rem;
     font-weight: 700;
     border-radius: 12px;
     background-color: var(--light-greyish-magenta);
+}
+
+.stars img {
+    padding-right: 0.2rem;
+    width: 1rem;
+    height: 0.8rem;
 }
 
 .rating-by-reportguru {
