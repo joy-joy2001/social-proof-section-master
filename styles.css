@@ -15,7 +15,7 @@
 body {
     min-height: 100vh;
     background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
-    background-position: top left, bottom right;
+    background-position: -20% 0%, 100% -80%;
     background-repeat: no-repeat;
     margin: 0;
     font-family: 'Spartan', sans-serif;
@@ -23,14 +23,15 @@ body {
 
 main {
     min-height: 100vh;
-    margin: 5rem 10rem;;
 }
 
+.whole-container {
+    padding: 5rem 10rem 0 10rem;
+}
 
 /* ---------------   UPPER CONTAINER STYLING: HERO + RATINGS   --------------- */
 .upper-container {
     display: flex;
-    border: 1px solid red;
 }
 
 /* This gives each article element with a direct parent of .upper-container a flex: 1
@@ -41,10 +42,6 @@ main {
 }
 
     /* ---------------   HERO CONTAINER   --------------- */
-.hero-container {
-    border: 1px solid black; 
-}
-
 .hero-container h1 {
     color: var(--dark-magenta);
     font-size: 3rem;
@@ -63,7 +60,6 @@ main {
 
     /* ---------------   RATINGS CONTAINER   --------------- */
 .rating-container {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,12 +94,32 @@ main {
     align-self: flex-end;
 }
 
+/* ---------------   LOWER CONTAINER STYLING   --------------- */
+.lower-container {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.review-container h2, h3, p {
+    margin: 0;
+} 
+
+.buyer-info {
+    display: inline-block;
+}
+
+.review-container img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
 /* ---------------   FOOTER   --------------- */
-.attribution {
+/* .attribution {
     font-size: 11px;
     text-align: center;
   }
 
   .attribution a {
     color: hsl(228, 45%, 44%);
-  }
+  } */
