@@ -15,23 +15,28 @@
 body {
     min-height: 100vh;
     background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
-    background-position: -20% 0%, 100% -80%;
     background-repeat: no-repeat;
+    background-position: top left, bottom right;
     margin: 0;
     font-family: 'Spartan', sans-serif;
 }
 
 main {
     min-height: 100vh;
+    margin: 1rem;
 }
 
 .whole-container {
-    padding: 5rem 10rem 0 10rem;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 5rem;
 }
 
 /* ---------------   UPPER CONTAINER STYLING: HERO + RATINGS   --------------- */
 .upper-container {
     display: flex;
+    gap: 1.5rem;
 }
 
 /* This gives each article element with a direct parent of .upper-container a flex: 1
@@ -46,7 +51,6 @@ main {
     color: var(--dark-magenta);
     font-size: 3rem;
     font-weight: 700;
-    font-weight: bold;
     margin: 0;
     line-height: 3rem;
 }
@@ -72,12 +76,16 @@ main {
     gap: 1rem;
     width: 80%;
     height: 3rem;
-    padding-left: 1.5rem;
+    padding: 0 1.5rem;
     color: var(--dark-magenta);
     font-size: .8rem;
     font-weight: 700;
     border-radius: 12px;
     background-color: var(--light-greyish-magenta);
+}
+
+.stars {
+    white-space: nowrap;
 }
 
 .stars img {
@@ -99,7 +107,7 @@ main {
     display: flex;
     gap: 1rem;
     margin-top: 3rem;
-    height: 200px;
+    min-height: 225px;
 }
 
     /* ---------------   REVIEW CONTAINER   --------------- */
@@ -107,15 +115,21 @@ main {
     padding: 1.5rem;
     border-radius: 12px;
     background-color: var(--dark-magenta);
-    height: fit-content;
+}
+
+.review-container:nth-child(1) {
+    align-self: flex-start;
+    flex: 1;
 }
 
 .review-container:nth-child(2) {
     align-self: center;
+    flex: 1;
 }
 
 .review-container:nth-child(3) {
     align-self: flex-end;
+    flex: 1;
 }
 
 .review-container h2 {
@@ -152,6 +166,30 @@ main {
 
 .buyer-info {
     display: inline-block;
+}
+
+/* ---------------   RESPONSIVE WEB DESIGN   --------------- */
+
+@media (max-width: 1000px) {
+
+    body {
+        background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+    }
+
+    .whole-container {
+        width: 375px;
+        font-size: 80%;
+    }
+    .upper-container, .lower-container {
+        flex-direction: column;
+    }
+
+    .rating, .review-container {
+        align-self: center;
+        width: 100%;
+    }
 }
 
 /* ---------------   FOOTER   --------------- */
