@@ -179,8 +179,8 @@ main {
     }
 
     .whole-container {
-        max-width: 360px;
-        font-size: 80%;
+        max-width: 375px;
+        padding: 0 1rem;
     }
     .upper-container, .lower-container {
         flex-direction: column;
