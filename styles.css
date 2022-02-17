@@ -97,12 +97,50 @@ main {
 /* ---------------   LOWER CONTAINER STYLING   --------------- */
 .lower-container {
     display: flex;
+    gap: 1rem;
     margin-top: 3rem;
+    height: 200px;
 }
 
-.review-container h2, h3, p {
+.review-container {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: var(--dark-magenta);
+    height: fit-content;
+}
+
+.review-container:nth-child(2) {
+    align-self: center;
+}
+
+.review-container:nth-child(3) {
+    align-self: flex-end;
+}
+
+.buyer-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.review-container h2 {
     margin: 0;
-} 
+    font-size: .8rem;
+    color: var(--white);
+}
+
+.review-container h3 {
+    margin: 0;
+    font-size: .7rem;
+    font-weight: 500;
+    color: var(--soft-pink);
+}
+
+.review-container p {
+    font-size: 0.7rem;
+    color: var(--white);
+    margin-top: 1.5rem;
+}
 
 .buyer-info {
     display: inline-block;
@@ -115,11 +153,11 @@ main {
 }
 
 /* ---------------   FOOTER   --------------- */
-/* .attribution {
+.attribution {
     font-size: 11px;
     text-align: center;
   }
 
   .attribution a {
     color: hsl(228, 45%, 44%);
-  } */
+  }
