@@ -179,7 +179,7 @@ main {
     }
 
     .whole-container {
-        width: 375px;
+        max-width: 360px;
         font-size: 80%;
     }
     .upper-container, .lower-container {
